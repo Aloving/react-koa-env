@@ -17,7 +17,6 @@
     "dotenv": "4.0.0",
     "eslint-config-react-app": "^2.0.1",
     "eslint-loader": "1.9.0",
-    "eslint-plugin-flowtype": "2.35.0",
     "extract-text-webpack-plugin": "3.0.0",
     "file-loader": "0.11.2",
     "flow-bin": "^0.57.3",
@@ -50,7 +49,8 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
-    "start": "node scripts/client/start.js",
+    "start": "node ./src/server/app.js",
+    "startboth": "node ./src/server/app.js && node scripts/client/start.js",
     "build": "node scripts/client/build.js",
     "test": "node scripts/client/test.js --env=jsdom",
     "flow": "flow"
@@ -99,6 +99,7 @@
   "devDependencies": {
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-flowtype": "^2.35.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0"
